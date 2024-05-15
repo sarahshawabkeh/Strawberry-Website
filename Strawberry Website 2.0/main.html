@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meet Strawberry!</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main-screen.css">
+    <link rel="stylesheet" href="styles/products-grid.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lobster&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body onclick="">
+    <div class="header">
+      <div class="header-item">
+        <img src="photos/strawberry-svgrepo-com.svg">
+        <p><a href="#main-title">berry</a></p>
+      </div>
+        <div class="header-item">
+          <img src="photos/basket-svgrepo-com.svg">
+          <p><a href="basket.html" target="_blank">basket</a></p>
+        </div>
+    </div>
+
+    <div class="main-screen" id="main-title" style="background-image: url('photos/strawberries-close-up-medium.jpg')">
+      <P class="title" id="strawberry-main-title" onclick="
+          document.getElementById('strawberry-main-title').innerText = 'Hello!';
+        ">Strawberry!</P>
+      <p>characteristic aroma, bright red color, juicy texture, and sweetness.</p>
+      <button><a href="#title">Meet Strawberry</a></button>
+    </div>
+
+    <div class="container">
+      <div class="grid-item1" id="title">
+        <p class="title">Meet Strawberry!</p>
+      </div>
+      <div class="grid-item">
+        <div style="display: flex; flex-direction: column;">
+          <a href="cakes.html">
+            <img src="photos/pink-strawberry-cake.jpg">
+          </a>
+          <div class="name-price" style="display: flex; align-items: center; justify-content: center;">
+            <p><a href="cakes.html">Strawberry Cakes</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div style="display: flex; flex-direction: column;">
+          <a href="drinks.html">
+            <img src="photos/drink.jpg">
+          </a>
+          <div class="name-price" style="display: flex; align-items: center; justify-content: center;">
+            <p><a href="drinks.html">Strawberry Drink</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div style="display: flex; flex-direction: column;">
+          <a href="map.html">
+            <img src="photos/cheesecake.jpg">
+          </a>
+          <div class="name-price" style="display: flex; align-items: center; justify-content: center;">
+            <p><a href="others.html">Others</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item5">
+        <P class="description" id="description" onclick="descriptionColor()">You will fall in love with these fresh Strawberry Cakes made with a homemade strawberry reduction.<br>
+           They're moist, tender, and the most beautiful shade of pink!<br>
+          These recipes combine layers of strawberry flavored cake with strawberry flavored cream cheese frosting, so you get fresh strawberry flavors with every bite.</P>
+      </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer1">
+          <p class="footer-logo" onclick="changeBgColor()">Strawberry</p>
+          <div class="footer2">
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="photos/instagram-svgrepo-com.svg">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <img src="photos/twitter-svgrepo-com.svg">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="photos/facebook-svgrepo-com.svg">
+            </a>
+          </div>
+        </div>
+        <hr class="footer-line">
+      </div>
+
+      <script>
+        function changeBgColor() {
+          document.body.style.backgroundColor = 'rgb(108,206,86)';
+          setTimeout(function() {
+            document.body.style.backgroundColor = '';
+          }, 2000);
+        }
+
+        function descriptionColor(){
+          var description1 = document.getElementById("description");
+          description1.style.backgroundColor = 'light grey';
+        }
+      </script>
+  </body>
+</html>

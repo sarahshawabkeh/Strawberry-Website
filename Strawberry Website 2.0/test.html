@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Online Store</title>
+  <style>
+    /* Add some basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+    }
+
+    #cart {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to our Online Store</h1>
+
+  <div id="products">
+    <div class="product" id="product1">
+      <h3>Product 1</h3>
+      <p>$10.00</p>
+      <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+    </div>
+
+    <div class="product" id="product2">
+      <h3>Product 2</h3>
+      <p>$15.00</p>
+      <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+    </div>
+
+    <!-- Add more products as needed -->
+  </div>
+
+  <div id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <script>
+    var cart = []; // Array to store cart items
+
+    function addToCart(itemName, itemPrice) {
+      var item = {
+        name: itemName,
+        price: itemPrice,
+        quantity: 1
+      };
+
+      // Check if the item is already in the cart
+      var existingItem = cart.find(cartItem => cartItem.name === itemName);
+
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push(item);
+      }
+
+      updateCart();
+    }
+
+    function updateCart() {
+      var cartItemsElement = document.getElementById('cart-items');
+      var totalElement = document.getElementById('total');
+      
+      // Clear the existing items in the cart
+      cartItemsElement.innerHTML = '';
+
+      var total = 0;
+
+      // Display each item in the cart
+      cart.forEach(item => {
+        var listItem = document.createElement('li');
+        listItem.textContent = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+        cartItemsElement.appendChild(listItem);
+
+        total += item.price * item.quantity;
+      });
+
+      // Update the total amount
+      totalElement.textContent = total.toFixed(2);
+    }
+
+    function checkout() {
+      alert("Thank you for shopping with us!\nTotal: $" + document.getElementById('total').textContent);
+      // You can implement actual checkout logic here
+      // This is just a simple alert for demonstration purposes
+      resetCart();
+    }
+
+    function resetCart() {
+      cart = [];
+      updateCart();
+    }
+  </script>
+
+</body>
+</html>

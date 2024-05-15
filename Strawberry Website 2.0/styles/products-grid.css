@@ -1,0 +1,77 @@
+.container{
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px 100px;
+  gap: 16px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+  font-family: 'work sans';
+  text-align: center;
+}
+.container .title{
+  text-align: center;
+  font-family: 'lobster';
+  font-size: 32px;
+  color: white;
+  background-color: rgb(216,79,79);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+  transition: box-shadow 0.25s;
+}
+.container .title:hover{
+  box-shadow: 0px 0px 10px rgba(216, 79, 79, 0.5);
+}
+.container img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.grid-item1{
+  grid-column: 1/ span 3;
+  padding: 8px 150px 0px;
+}
+.grid-item5{
+  grid-column: 1/ span 3;
+  padding: 0px 150px;
+}
+.grid-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.name-price{
+  font-family: 'comfortaa';
+  font-weight: bold;
+  margin-left: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+  transition: text-shadow 0.15s;
+}
+.name-price:hover{
+  text-shadow: -2px 2px rgba(216, 79, 79, 0.3);
+}
+.description{
+  border: solid;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.description:hover{
+  box-shadow: inset 0px 0px 10px rgba(216, 79, 79, 0.3);
+}
+.name-price{
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'comfortaa';
+}

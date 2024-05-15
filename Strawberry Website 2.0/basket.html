@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basket</title>
+    <link rel="stylesheet" href="styles/basket.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lobster&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-item">
+        <img src="photos/strawberry-svgrepo-com.svg">
+        <p><a href="main.html">berry</a></p>
+      </div>
+        <div class="header-item">
+          <img src="photos/basket-svgrepo-com.svg">
+          <p><a href="basket.html">basket</a></p>
+        </div>
+    </div>
+
+    <div>
+      <table>
+        <tr>
+          <td colspan="4">
+            <p class="title">Your Basket</p>
+          </td>
+        </tr>
+        <tr style="height: 60px;">
+          <td style="font-family: 'comfortaa'; font-weight: bold;">Product</td>
+          <td></td>
+          <td>Quantity</td>
+          <td style="text-decoration: underline; cursor: pointer;">Remove all</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="photos/tart.jpg">
+          </td>
+          <td class="name" style="font-weight: bold; text-align: left;">Strawberry tart</td>
+          <td>
+            <input type="number" min="0" max="5" style="
+            width: 44px;
+            height: 24px;
+            border: none;
+            margin-right: 8px;
+            ">
+          </td>
+            <td>
+              <p style="font-size: 20px;">$2.99</p>
+              <p style="font-size: 14px;">save for later</p>
+              <p style="font-size: 14px;">remove</p>
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="photos/icecram-cake.jpg">
+          </td>
+          <td class="name" style="font-weight: bold; text-align: left;">Ice Cream Cake</td>
+          <td>
+            <input type="number" min="0" max="5" style="
+            width: 44px;
+            height: 24px;
+            border: none;
+            margin-right: 8px;
+            ">
+        </td>
+        <td>
+          <p style="font-size: 20px;">$2.99</p>
+          <p style="font-size: 14px;">save for later</p>
+          <p style="font-size: 14px;">remove</p>
+        </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <hr style="height: 1px; border: none; background-color: black; padding: 0; margin: 0;">
+          </td>
+        </tr>
+        <tr style="height: 60px;">
+          <td colspan="2"></td>
+          <td>
+            <p style="font-weight: bold; text-align: right;">sub-total</p>
+            <p style="text-align: right; font-size: 14px;">2 items</p>
+          </td>
+          <td style="font-size: 20px; font-weight: bold;">$6.99</td>
+        </tr>
+        <tr style="height: 60px;">
+          <td colspan="2"></td>
+          <td colspan="2">
+            <button style="
+              border: none;
+              border-radius: 8px;
+              height: 40px;
+              width: 120px;
+              font-family: 'comfortaa';
+              font-weight: bold;
+              cursor: pointer;
+              background-color: rgb(216,79,79);
+              color: white;
+              "
+              onclick="
+                alert('Thank You, Come Again!');
+              ">Checkout</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container-test" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="shipping">
+
+        <form action="shipping.php" method="post">
+          <fieldset class="fieldset1">
+            <p style="font-weight: bold; font-family: 'comfortaa'; font-size: 20px; margin-bottom: 16px;">Shipping information</p>
+
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Your first and last name"><br>
+
+            <label for="address">Street Address</label><br>
+            <input type="text" id="address" name="address" placeholder="123 Example Street"><br>
+
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <fieldset style="text-align: left;">
+                <label for="city">City</label><br>
+                <input type="text" id="city" name="city" placeholder="City" style="width: 100%;">
+              </fieldset>
+              
+              <fieldset style="text-align: left;">
+                <label for="zip">Zip Code</label><br>
+                <input type="text" id="zip" name="zip" placeholder="Zip Code" style="width: 100%;"><br>
+              </fieldset>
+            </div>
+  
+            <label for="country">Country</label><br>
+            <select id="country" name="country">
+              <option>Jordan</option>
+            </select><br>
+  
+            <label for="email">Email Addrerss</label><br>
+            <input type="email" id="email" name="email" placeholder="email@example.com"><br>
+            
+            <input type="submit" value="Place Your Order" style="
+            border: none;
+            border-radius: 8px;
+            height: 40px;
+            width: 180px;
+            font-family: 'comfortaa';
+            font-weight: bold;
+            cursor: pointer;
+            background-color: rgb(216,79,79);
+            color: white;
+            margin-top: 16px;">
+          </fieldset>
+        </form>
+
+      </div>
+  
+      <div class="container">
+        <p style="font-weight: bold; margin-bottom: 8px;">When will I be charged?</p>
+        <p>You will be charged when/if this campaign reaches its minimum number of sales needed to print.</p>
+        <hr style="width: 100%; background-color: black; border: none; height: 1px;">
+        <p style="font-weight: bold; margin-bottom: 8px;">When will i recieve my order?</p>
+        <p>If this campaign is successful, you will recieve your order between <strong>October 28</strong> and <strong>November 8th.</strong></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer1">
+        <p class="footer-logo">Strawberry</p>
+        <div class="footer2">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="photos/instagram-svgrepo-com.svg">
+          </a>
+          <a href="https://twitter.com/" target="_blank">
+            <img src="photos/twitter-svgrepo-com.svg">
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="photos/facebook-svgrepo-com.svg">
+          </a>
+        </div>
+      </div>
+      <hr class="footer-line">
+    </div>
+
+    <script>
+      function addToCart(productName, price) {
+        var cart = document.getElementById('cart');
+
+        var newItem = document.createElement('product');
+        newItem.innerHTML = `<div class="product" id="product" style="margin-bottom: 6px;">
+              <img src="images/${productName}.jpg" style="margin-right: 6px;">
+              <div>
+                <p>${productName}</p>
+                <p>${price}</p>
+              </div>
+              <button style="margin-left: 130px;">Remove From cart</button>
+            </div>`;
+
+        cart.appendChild(newItem);
+      }
+      </script>
+  </body>
+</html>
